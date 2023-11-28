@@ -55,9 +55,15 @@
             <!-- Галерея статей -->
 
             <div class="articles-gallery">
-                <!-- Статья 1-->
+
                 <!-- Для выделенной статьи в div ниже добавляется класс "article-dark" (через пробел после "article") -->
-                <div class="article" v-for="article in articleList" :key="article.id">
+                <div
+                    class="article"
+                    v-for="article in articleList"
+                    :key="article.id"
+                    :class="{ 'article-dark': article.id === hoveredArticleId }"
+                    @mouseover="hoveredArticleId = article.id"
+                    @mouseleave="hoveredArticleId = 0">
                     <!-- Элемент статьи с картинкой и текстом -->
                     <div class="article-img">
                         <img class="article-img" :src="article.image" :alt="article.imageAlt">
@@ -116,9 +122,11 @@ export default {
   name: 'BlogPage',
   data() {
     return {
+        hoveredArticleId: 0,
         arrow: arrowImage,
         articleList: [
             {
+                id: 1,
                 image: articleImage1,
                 imageAlt: 'image 1',
                 imageText: 'Kitchen Design',
@@ -126,6 +134,7 @@ export default {
                 date: '26 December, 2022'
             },
             {
+                id: 2,
                 image: articleImage2,
                 imageAlt: 'image 2',
                 imageText: 'Living Design',
@@ -133,6 +142,7 @@ export default {
                 date: '22 December, 2022'
             },
             {
+                id: 3,
                 image: articleImage3,
                 imageAlt: 'image 3',
                 imageText: 'Interior Design',
@@ -140,6 +150,7 @@ export default {
                 date: '25 December, 2022'
             },
             {
+                id: 4,
                 image: articleImage4,
                 imageAlt: 'image 4',
                 imageText: 'Kitchen Design',
@@ -147,6 +158,7 @@ export default {
                 date: '26 December, 2022'
             },
             {
+                id: 5,
                 image: articleImage5,
                 imageAlt: 'image 5',
                 imageText: 'Living Design',
@@ -154,6 +166,7 @@ export default {
                 date: '22 December, 2022'
             },
             {
+                id: 6,
                 image: articleImage6,
                 imageAlt: 'image 6',
                 imageText: 'Interior Design',
