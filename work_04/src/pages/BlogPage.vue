@@ -3,7 +3,7 @@
         <!-- Широкий баннер -->
         <div class="wide-banner" id="wide-banner-bg1">
             <div class="wide-banner-text">
-                <h3 class="h3-text ">Articles & News</h3>
+                <h3 class="h3-text ">{{ articlesGalleryTitle }}</h3>
                 <p class="p-text no-vertical-margin">Home / Blog</p>
             </div>
         </div>
@@ -37,7 +37,7 @@
                     <div class="article-bottom">
                         <p>25 December, 2022</p>
                         <button class="article-button">
-                            <img src="@/assets/arrowBlack.png">
+                            <img :src="arrow">
                         </button>
                     </div>
                 </div>
@@ -47,16 +47,12 @@
 
         <!-- Секция Articles & News -->
         <section class="section w1200">
-            <!-- Заголовок секции -->
             <div class="section-header">
-                <h3 class="h3-text text-left">Articles & News</h3>
+                <h3 class="h3-text text-left">{{ articlesGalleryTitle }}</h3>
             </div>
 
             <!-- Галерея статей -->
-
             <div class="articles-gallery">
-
-                <!-- Для выделенной статьи в div ниже добавляется класс "article-dark" (через пробел после "article") -->
                 <div
                     class="article"
                     v-for="article in articleList"
@@ -92,18 +88,10 @@
 
             <!-- Кнопки перехода на другие страницы статей: 1, 2, 3 .. -->
             <div class="articles-pagination-buttons">
-                <button class="article-button ">
-                    01
-                </button>
-                <button class="article-button article-button-dark border-brown">
-                    02
-                </button>
-                <button class="article-button article-button-dark border-brown">
-                    03
-                </button>
-                <button class="article-button article-button-dark border-brown">
-                    <img src="@/assets/arrowBlack.png">
-                </button>
+                <button class="article-button ">01</button>
+                <button class="article-button article-button-dark border-brown">02</button>
+                <button class="article-button article-button-dark border-brown">03</button>
+                <button class="article-button article-button-dark border-brown"><img :src="arrow"></button>
             </div>
 
         </section>
@@ -122,6 +110,7 @@ export default {
   name: 'BlogPage',
   data() {
     return {
+        articlesGalleryTitle: 'Articles & News',
         hoveredArticleId: 0,
         arrow: arrowImage,
         articleList: [
