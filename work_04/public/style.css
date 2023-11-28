@@ -1,0 +1,587 @@
+/* Шрифты из макета */
+/* Jost */
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+/* DM Serif Display */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body{
+    margin: 0; /*сброс отступов*/
+    background-color: #FFFFFF;
+    box-sizing: border-box;  
+    font-family: 'Jost', sans-serif; /*стандартный шрифт*/
+}
+.w1200{ /*Ширина 1200*/
+    width: 1200px;
+    margin: 0 auto;
+}
+.w800{ /*Ширина 800*/
+    width: 800px;
+}
+
+
+/* Общие стили текста */
+.h3-text{ /*Большой заголовок*/
+    margin: 0;
+    font-family: 'DM Serif Display';
+    font-size: 50px;
+    line-height: 62px;
+    color: #292F36;
+}
+
+.h4-text { /*Маленький заголовок*/
+    font-family: 'DM Serif Display';
+    font-size: 25px;
+    line-height: 31px;
+    font-weight: bold;
+    color: #292F36;
+}
+
+.p-text{ /*Средний текст абзаца*/
+    font-size: 22px;
+    line-height: 33px;
+    color: #4D5053;
+}
+
+
+.no-vertical-margin{ /*Убрать вертикальные отступы*/
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-left{/*Выравнять текст по левому краю*/
+    text-align: left;
+}
+
+
+
+/* Баннер на всю ширину экрана */
+.wide-banner{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    height: 356px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center bottom;
+}
+.wide-banner-text{ /* Блок с текстом в баннере на всю ширину экрана */
+    margin: 0 auto;
+    width: 503px;
+    height: 178px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+    border-top-left-radius: 37px;
+    border-top-right-radius: 37px;
+    background-color: white;
+}
+
+/* Фоны широких баннеров */
+#wide-banner-bg1{
+    background-image: url('/src/assets/wide-banner1.jpg');
+}
+
+/*Блок где картинка слева, а текст справа: Last Post*/
+.img-and-text{
+    margin-top: 27px;
+    height: 522px;
+    display: flex;
+    justify-content: space-between;
+}
+.post-image{ /* Картинка поста */
+    padding: 22px;
+    width: 569px;
+    height: 478px;
+    border: 1px solid #E7E7E7;
+    background-color: white;
+    border-radius: 62px;
+}
+.post-text{ /* Текст поста */
+    margin-top: 51px;
+    margin-right: 34px;
+    width: 489px;
+    height: 375px;
+}
+
+
+/* Элемент с номерами страниц статей в кнопках */
+.articles-pagination-buttons{
+    margin: 51px auto;
+    width: 268px;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Бежевая граница */
+.border-brown{ 
+    border: 1px solid #CDA274 !important;
+}
+
+
+
+
+/* Шапка */
+.logo{ /*Текст логотипа*/
+    font-family: 'DM Serif Display';
+    font-size: 40px;
+    line-height: 50px;        
+    color: #292F36;   
+}
+.logo img{ /*Картинка логотипа*/
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+header{ /*Сама шапка*/
+    display: flex;
+    justify-content: space-between;
+    padding-top: 44px;
+    padding-bottom: 57px;
+    width: 1200px;
+}
+
+/*Меню*/
+nav{ 
+    padding-top: 12.5px;
+}
+.menu{ /*Блок меню*/
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    right: 0;
+    width: 243px;
+    height: 25px;
+    text-align: right;
+}
+.menu a{ /*Ссылки меню*/
+    text-decoration: none;
+    color: #292F36;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+/* Баннер */
+.banner{
+    min-height: 758px;
+    max-height: 758px;
+    border-radius: 71px;
+    background-color: lightgrey;
+    background-image: url('/src/assets/Banner.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+.banner-text{ /*Элемент с текстом в баннере*/
+    width: 434px;
+    height: 342px;
+    margin-left: 52px;
+    padding-top: 208px;
+}
+.banner-text h2{
+    font-style: 'DM Serif Display';
+    font-size: 65px;
+    line-height: 81.25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.banner-text p{
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 1%;
+}
+.banner-button{ /*Кнопка в баннере*/
+    background-color: #292F36;
+    width: 220px;
+    height: 75px;
+    border-radius: 18px;
+    padding: 26px, 49px, 26px, 48px;
+    gap: 10px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+}
+
+/* Общие стили секций */
+.section{
+    margin-top: 96px;
+}
+.section-header{
+    text-align: center;
+}
+
+/* Скругления углов */
+.round-top-left {
+    border-top-left-radius: 71px;
+}
+
+.round-top-right {
+    border-top-right-radius: 71px;
+}
+
+.round-bottom-right {
+    border-bottom-right-radius: 71px;
+}
+
+.round-bottom-left {
+    border-bottom-left-radius: 71px;
+}
+
+/* Галерея проектов */
+.projects-gallery{
+    width: 1200px;
+    margin-top: 93px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 150px;
+}
+
+.project{ /*Проект*/
+    width: 525px;
+    height: 548px;
+}
+.project img{
+    width: 525px;
+    height: 548px;
+}
+.project-description{ /*Блок описание проекта*/
+    margin-top: 28px;
+    width: 525px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-text{ /*Блок с текстом описания*/
+    width: 217px;
+    height: 62px;
+}
+.project-text b, .tags b {
+    font-style: 'DM Serif Display';
+    font-size: 25px;
+    line-height: 31px;
+    color: #292F36;
+}
+.project-text p{
+    margin: 0;
+    font-size: 22px;
+    line-height: 33px;
+    color: #4D5053;
+}
+
+.project-button{ /*Кнопка проекта*/
+    width: 70px;
+    height: 70px;
+    background-color: #F4F0EC;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+}
+.project-button img{
+    max-width: 8px;
+    max-height: 18px;
+}
+
+/* Секция статистика */
+.section-stats{
+    background-color: #F4F0EC;
+    height: 457px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 96px;
+}
+.stats{ /*Внутренний блок секции*/
+    width: 1082px;
+    height: 155px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.stat{ /*Элемент статистики*/
+    width: 400px;
+}
+.stat-header{
+    font-family: 'DM Serif Display';
+    font-size: 85px;
+    line-height: 106px;
+    color: #CDA274;
+}
+.stat-text{
+    margin-top: 16px;
+    font-size: 22px;
+    line-height: 33px;
+    text-wrap: nowrap;
+    color: #4D5053;
+}
+.stat-border-left{ /*Граница слева*/
+    border-left: 1px solid #CDA274;
+}
+
+/* Галерея статей */
+.articles-gallery{
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-top: 52px;
+}
+.article{  /*Статья*/
+    width: 340px;
+    height: 501px;
+    padding: 21px;
+    border: 1px solid #E7E7E7;
+    border-radius: 75px;
+}
+
+.article-img{ /*Элемент с фоном*/
+    position: relative;
+    width: 340px;
+    height: 300px;
+    border-top-left-radius: 53px;
+    border-top-right-radius: 53px;
+
+    /* background-size: cover;
+    background-position: center bottom; */
+}
+
+.article-img-text{ /*Текст на фоне в блоке*/
+    width: 124px;
+    height: 41px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0px;
+
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    background-color: white;
+}
+
+.article-description{ /*Описание статьи*/
+    width: 340px;
+    height: 112px;
+}
+
+.article-header{ /*Заголовок статьи*/
+    margin-top: 12px;
+    font-style: 'DM Serif Display';
+    font-size: 25px;
+    line-height: 31px;
+    width: 300px; /*+АР*/
+    color: #292F36;
+}
+.article-bottom{ /*Нижняя часть статьи*/
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.article-bottom p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.article-button{ /*кнопка*/
+    width: 52px;
+    height: 52px;
+    background-color: #F4F0EC;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+}
+.article-button img{
+    position: relative;
+    top: 3px;
+    left: 2px;
+    max-width: 8px;
+    max-height: 18px;
+}
+
+.article-dark{ /*Другой стиль статьи*/
+    background-color: #F4F0EC;
+}
+.article-button-dark{
+    background-color: white;
+}
+
+/* Футер */
+footer{
+    padding-top: 96px;
+    display: flex;
+    justify-content: space-between;
+    height: 406px;
+}
+
+.footer-1 p{ /*Первая часть футера*/
+    font-size: 22px;
+    line-height: 33px;
+    color: #4D5053;
+}
+.footer-icons{
+    margin-top: 31px;
+}
+.footer-icons img{
+    max-width: 16px;
+    max-height: 22px;
+}
+.footer-icon{
+    margin-left: 54px;
+}
+
+/*Вторая часть футера*/
+.footer-2{
+    width: 382px;
+    padding-top: 0;
+    margin-top: 0;
+}
+ul{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.footer-2 b, .footer-3 b{
+    margin-left: 25px;
+    font-family: 'DM Serif Display';
+    font-size: 25px;
+    line-height: 31px;
+    color: #292F36;
+}
+.footer-2 li, .footer-3 p{
+    margin-left: 25px;
+    font-size: 22px;
+    line-height: 40px;
+    color: #4D5053;
+}
+.footer-2 li{
+    line-height: 66px;
+}
+.footer-2 a{
+    text-decoration: none;
+    color: #4D5053;
+}
+
+/*Третья часть футера*/
+.footer-3{
+    width: 382px;
+}
+.small-lh{
+    line-height: 28px !important;
+}
+
+
+
+
+
+/* Страница projects.html */
+
+/* Строка с новостью и блоком тегов на одной линии */
+.news-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Весь блок тэгов с заголовком*/
+.news-tags{
+    width: 345px;
+    text-align: left;
+}
+/* Блок только с тэгами */
+.tags{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 10px;
+}
+.tag{ /*Один тэг*/
+    width: fit-content;
+    height: fit-content;
+    padding: 9px 30px 9px 30px;
+    border-radius: 10px;
+    background-color: #F4F0EC;
+    color: #292F36;
+
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 2%;
+    text-align: center;
+}
+.tag-active{ /*Активный тэг*/
+    background-color: #292F36;
+    color: white;
+}
+
+
+.news-image-big{ /*Картинка новости большая*/
+    margin-top: 21px;
+    width: 799px;
+    height: 539px;
+}
+
+.news-image-small{ /*Картинка новости маленькая*/
+    margin-top: 44px;
+    width: 799px;
+    height: 365px;
+}
+
+/* Блок с цитатой */
+.news-citation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 53px;
+    padding-bottom: 53px;
+    margin-bottom: 27px;
+
+    width: 799px;
+    height: 267;
+    border-radius: 50px;
+    background-color: #F4F0EC;
+}
+
+.news-citation p{ /*Абзац цитаты*/
+    font-family: 'DM Serif Display';
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    color: #CDA274;
+}
+
+
+/* Нумерованный список */
+ol{
+    margin-left: 25px;
+    padding-left: 0;
+}
+/* Свой маркер */
+ol li::marker {
+    color: #CDA274;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+/* Элемент списка */
+ol li{
+    margin-bottom: 32px;
+    font-size: 22px;
+    line-height: 33px;
+}
