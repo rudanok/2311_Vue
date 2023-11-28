@@ -53,14 +53,16 @@
             </div>
 
             <!-- Галерея статей -->
+
             <div class="articles-gallery">
                 <!-- Статья 1-->
-                <div class="article">
+                <!-- Для выделенной статьи в div ниже добавляется класс "article-dark" (через пробел после "article") -->
+                <div class="article" v-for="article in articleList" :key="article.id">
                     <!-- Элемент статьи с картинкой и текстом -->
                     <div class="article-img">
-                        <img class="article-img" :src="articleList[0].image" alt="image 1">
+                        <img class="article-img" :src="article.image" :alt="article.imageAlt">
                         <div class="article-img-text">
-                            {{ articleList[0].imageText }}
+                            {{ article.imageText }}
                         </div>
                     </div>
 
@@ -68,152 +70,19 @@
                     <div class="article-description">
                         <!-- Заголовок статьи -->
                         <p class="article-header">
-                            <b>{{ articleList[0].description }}</b>
+                            <b>{{ article.description }}</b>
                         </p>
 
                         <!-- Нижняя часть статьи -->
                         <div class="article-bottom">
-                            <p>{{ articleList[0].date }}</p>
+                            <p>{{ article.date }}</p>
                             <button class="article-button">
-                                <img :src="arrowImage">
+                                <img :src="arrow">
                             </button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Статья 2 -->
-                <div class="article article-dark">
-                    <div class="article-img">
-                        <img class="article-img" src="@/assets/article2.jpg" alt="image 2">
-                        <div class="article-img-text">
-                            Living Design
-                        </div>
-                    </div>
-
-                    <div class="article-description">
-                        <p class="article-header">
-                            <b>Low Cost Latest Invented <br>
-                            Interior Designing <br>
-                            Ideas.</b>
-                        </p>
-
-                        <div class="article-bottom">
-                            <p>22 December, 2022</p>
-                            <button class="article-button article-button-dark">
-                                <img src="@/assets/arrowBlack.png">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Статья 3-->
-                <div class="article">
-                    <div class="article-img">
-                        <img class="article-img" src="@/assets/article3.jpg" alt="image 3">
-                        <div class="article-img-text">
-                            Interior Design
-                        </div>
-                    </div>
-
-                    <div class="article-description">
-                        <p class="article-header">
-                            <b>Best For Any Office &<br>
-                            Business Interior <br>
-                            Solution</b>
-                        </p>
-
-                        <div class="article-bottom">
-                            <p>25 December, 2022</p>
-                            <button class="article-button">
-                                <img src="@/assets/arrowBlack.png">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!--  -->
-                <!-- Вторая строка статей -->
-                <!--  -->
-
-                <!-- Статья 4-->
-                <div class="article">
-                    <!-- Элемент статьи с фоновой картинкой и текстом -->
-                    <div class="article-img">
-                        <img class="article-img" src="@/assets/article4.jpg" alt="image 4">
-                        <div class="article-img-text">
-                            Kitchen Design
-                        </div>
-                    </div>
-
-                    <!-- Описание статьи -->
-                    <div class="article-description">
-                        <!-- Заголовок статьи -->
-                        <p class="article-header">
-                            <b>Let’s Get Solution For <br>
-                            Building Construction <br>
-                            Work</b>
-                        </p>
-
-                        <!-- Нижняя часть статьи -->
-                        <div class="article-bottom">
-                            <p>26 December, 2022</p>
-                            <button class="article-button">
-                                <img src="@/assets/arrowBlack.png">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Статья 5 -->
-                <div class="article">
-                    <div class="article-img">
-                        <img class="article-img" src="@/assets/article5.jpg" alt="image 5">
-                        <div class="article-img-text">
-                            Living Design
-                        </div>
-                    </div>
-
-                    <div class="article-description">
-                        <p class="article-header">
-                            <b>Low Cost Latest Invented <br>
-                            Interior Designing <br>
-                            Ideas.</b>
-                        </p>
-
-                        <div class="article-bottom">
-                            <p>22 December, 2022</p>
-                            <button class="article-button">
-                                <img src="@/assets/arrowBlack.png">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Статья 6-->
-                <div class="article">
-                    <div class="article-img">
-                        <img class="article-img" src="@/assets/article6.jpg" alt="image 6">
-                        <div class="article-img-text">
-                            Interior Design
-                        </div>
-                    </div>
-
-                    <div class="article-description">
-                        <p class="article-header">
-                            <b>Best For Any Office &<br>
-                            Business Interior <br>
-                            Solution</b>
-                        </p>
-
-                        <div class="article-bottom">
-                            <p>25 December, 2022</p>
-                            <button class="article-button">
-                                <img src="@/assets/arrowBlack.png">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--</Галерея статей>-->
+            </div>
 
             <!-- Кнопки перехода на другие страницы статей: 1, 2, 3 .. -->
             <div class="articles-pagination-buttons">
@@ -236,18 +105,60 @@
 </template>
 
 <script>
+import arrowImage from '@/assets/arrowBlack.png';
+import articleImage1 from '@/assets/article1.jpg';
+import articleImage2 from '@/assets/article2.jpg';
+import articleImage3 from '@/assets/article3.jpg';
+import articleImage4 from '@/assets/article4.jpg';
+import articleImage5 from '@/assets/article5.jpg';
+import articleImage6 from '@/assets/article6.jpg';
 export default {
   name: 'BlogPage',
   data() {
     return {
-        arrowImage: '@/assets/arrowBlack.png',
+        arrow: arrowImage,
         articleList: [
             {
-                image: '@/assets/article1.jpg',
+                image: articleImage1,
                 imageAlt: 'image 1',
                 imageText: 'Kitchen Design',
                 description: 'Let’s Get Solution For Building Construction Work',
                 date: '26 December, 2022'
+            },
+            {
+                image: articleImage2,
+                imageAlt: 'image 2',
+                imageText: 'Living Design',
+                description: 'Low Cost Latest Invented Interior Designing Ideas.',
+                date: '22 December, 2022'
+            },
+            {
+                image: articleImage3,
+                imageAlt: 'image 3',
+                imageText: 'Interior Design',
+                description: 'Best For Any Office & Business Interior Solution',
+                date: '25 December, 2022'
+            },
+            {
+                image: articleImage4,
+                imageAlt: 'image 4',
+                imageText: 'Kitchen Design',
+                description: 'Let’s Get Solution For Building Construction Work',
+                date: '26 December, 2022'
+            },
+            {
+                image: articleImage5,
+                imageAlt: 'image 5',
+                imageText: 'Living Design',
+                description: 'Low Cost Latest Invented Interior Designing Ideas.',
+                date: '22 December, 2022'
+            },
+            {
+                image: articleImage6,
+                imageAlt: 'image 6',
+                imageText: 'Interior Design',
+                description: 'Best For Any Office & Business Interior Solution',
+                date: '25 December, 2022'
             }
         ]
     }
