@@ -1,0 +1,79 @@
+/* Элемент с кнопками заголовками разделов проектов */
+.projects-headers{
+    margin: 200px auto 61px auto;
+    width: 880px;
+    height: 75px;
+    display: flex;
+
+    border: 1px solid #CDA274;
+    border-radius: 18px;
+}
+.projects-headers a{ /*Стили ссылок в заголовках разделов*/
+    text-decoration: none;
+    color: black;
+}
+
+/*Кнопка заголовок одного раздела*/
+.project-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 219px;
+    height: 75px;
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*Коричневая кнопка заголовок одного раздела*/
+.project-header-brown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 219px;
+    height: 75px;
+    
+    border-radius: 18px;
+    background-color: #CDA274;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*Строка с двумя колонками, содержащими проекты*/
+.projects-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Колонки с проектами*/
+.project-col-1, .project-col-2{
+    width: 585px;
+}
+
+/*Блок проекта*/
+.project-block{
+    width: 585px;
+    margin-bottom: 35px;
+}
+
+/*Блок картинки*/
+.project-img{
+    width: 585px;
+    position: relative;
+}
+
+/*Звезда для избранного поверх картинки проекта*/
+.project-star{
+    position: absolute;
+    max-width: 36px;
+    max-height: 34px;
+    top: 5px;
+    right: 0;
+    cursor: pointer;
+}
+
+/*Широкое описание проекта*/
+.description-wide{
+    width: 585px;
+}
