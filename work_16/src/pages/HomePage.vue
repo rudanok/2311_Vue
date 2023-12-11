@@ -216,15 +216,24 @@
 
             </div> <!--</Галерея статей>-->
         </section>
+        <FooterBlock/>
     </main>
 </template>
 
 <script>
+
+import FooterBlock from '@/blocks/FooterBlock.vue'
+
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    FooterBlock
+  }
 }
 </script>
 
 <style lang="css" scoped>
-
+.banner {
+    background-image: url('@/assets/Banner.jpg')
+}
 </style>

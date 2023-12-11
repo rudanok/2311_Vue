@@ -70,6 +70,7 @@
 
             <!-- Кнопки перехода на другие страницы статей: 1, 2, 3 .. -->
             <PaginationButtons/>
+            <FooterBlock/>
 
         </section>
 
@@ -78,6 +79,8 @@
 
 <script>
 import PaginationButtons from '@/components/PaginationButtons.vue'
+import FooterBlock from '@/blocks/FooterBlock.vue'
+
 import arrowImage from '@/assets/arrowBlack.png'
 import starImage from '@/assets/star.png'
 
@@ -86,7 +89,8 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'OurProjectsPage',
   components: {
-    PaginationButtons
+    PaginationButtons,
+    FooterBlock
   },
   data () {
     return {

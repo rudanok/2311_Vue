@@ -87,16 +87,14 @@
             </div>
 
             <PaginationButtons />
-
-            <!-- Кнопки перехода на другие страницы статей: 1, 2, 3 .. -->
-            <PaginationButtons/>
-
+            <FooterBlock/>
         </section>
     </main>
 </template>
 
 <script>
 import PaginationButtons from '@/components/PaginationButtons.vue'
+import FooterBlock from '@/blocks/FooterBlock.vue'
 import arrowImage from '@/assets/arrowBlack.png'
 import articleImage1 from '@/assets/article1.jpg'
 import articleImage2 from '@/assets/article2.jpg'
@@ -106,7 +104,10 @@ import articleImage5 from '@/assets/article5.jpg'
 import articleImage6 from '@/assets/article6.jpg'
 export default {
   name: 'BlogPage',
-  components: PaginationButtons,
+  components: {
+    PaginationButtons,
+    FooterBlock
+  },
   data () {
     return {
       articlesGalleryTitle: 'Articles & News',

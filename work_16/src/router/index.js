@@ -1,25 +1,38 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
-Vue.use(Router)
+import HomePage from '@/pages/HomePage.vue'
+import BlogPage from '@/pages/BlogPage.vue'
+import OurProjectPage from '@/pages/OurProjectPage.vue'
+import NotFoundPage from '@/pages/NotFoundPage.vue'
 
-export default new Router({
-  routers: [
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes:
+  [
     {
       path: '/',
       name: 'Home',
-      component: import('@/pages/HomePage.vue')
+      component: HomePage
     },
     {
       path: '/project',
       name: 'Project',
-      component: import('@/pages/OurProjectPage.vue')
+      component: OurProjectPage
     },
     {
       path: '/blog',
       name: 'Blog',
-      component: import('@/pages/BlogPage.vue')
+      component: BlogPage
+    },
+    {
+      path: '*',
+      name: '404',
+      component: NotFoundPage
     }
-  ],
-  mode: 'history'
+  ]
 })
+
+export default router
